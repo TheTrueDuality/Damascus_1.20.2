@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_exulite_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "damascus:exulite_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:exulite_ingot_from_blasting_exulite_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_exulite_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:exulite_ingot_from_blasting_exulite_ore"
+    ]
+  }
+}

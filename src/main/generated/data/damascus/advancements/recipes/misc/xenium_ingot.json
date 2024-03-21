@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:xenium_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_xenium_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "damascus:xenium_block"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_xenium_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:xenium_ingot"
+    ]
+  }
+}

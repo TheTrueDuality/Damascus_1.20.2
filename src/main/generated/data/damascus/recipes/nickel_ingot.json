@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "damascus:nickel_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "damascus:nickel_ingot"
+  }
+}

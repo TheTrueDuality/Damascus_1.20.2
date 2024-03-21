@@ -1,0 +1,7 @@
+// 1.20.4	2024-03-20T16:40:19.7297492	Mod of Damascus/Block Loot Tables
+b2011a0511edf2b815bd998150fc5718b638afaa data\damascus\loot_tables\blocks\deepslate_tungsten_ore.json
+9636f42d4b0b19c9f7f7f44202fef2c7f94deb9d data\damascus\loot_tables\blocks\tin_block.json
+a1bd9c459ee9baeada16c043fffa2a77e725abed data\damascus\loot_tables\blocks\zinc_ore.json
+ee0ba292f7da1ab51ca445fdaf1d5bb79ed11dee data\damascus\loot_tables\blocks\tungsten_block.json
+e242ee821d62fc06a142132f250f8491c6e674b9 data\damascus\loot_tables\blocks\raw_tungsten_block.json
+57bfc337f2193af0f9e7c6bfde15503d92be6fd0 data\damascus\loot_tables\blocks\tungsten_ore.json

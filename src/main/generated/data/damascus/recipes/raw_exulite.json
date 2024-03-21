@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "damascus:raw_exulite_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "damascus:raw_exulite"
+  }
+}

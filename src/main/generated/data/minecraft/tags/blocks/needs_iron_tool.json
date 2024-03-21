@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "damascus:aluminum_ore",
+    "damascus:deepslate_aluminum_ore",
+    "damascus:aluminum_block",
+    "damascus:raw_aluminum_block",
+    "damascus:tungsten_ore",
+    "damascus:deepslate_tungsten_ore",
+    "damascus:tungsten_block",
+    "damascus:raw_tungsten_block",
+    "damascus:tin_ore",
+    "damascus:deepslate_tin_ore",
+    "damascus:tin_block",
+    "damascus:raw_tin_block",
+    "damascus:silver_ore",
+    "damascus:deepslate_silver_ore",
+    "damascus:silver_block",
+    "damascus:raw_silver_block",
+    "damascus:zinc_ore",
+    "damascus:deepslate_zinc_ore",
+    "damascus:zinc_block",
+    "damascus:raw_zinc_block",
+    "damascus:nickel_ore",
+    "damascus:deepslate_nickel_ore",
+    "damascus:nickel_block",
+    "damascus:raw_nickel_block",
+    "damascus:steel_block"
+  ]
+}

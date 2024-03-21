@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "damascus:cobalt_ore",
+    "damascus:deepslate_cobalt_ore",
+    "damascus:cobalt_block",
+    "damascus:raw_cobalt_block",
+    "damascus:platinum_ore",
+    "damascus:deepslate_platinum_ore",
+    "damascus:platinum_block",
+    "damascus:raw_platinum_block",
+    "damascus:xenium_ore",
+    "damascus:deepslate_xenium_ore",
+    "damascus:xenium_block",
+    "damascus:raw_xenium_block",
+    "damascus:exulite_ore",
+    "damascus:deepslate_exulite_ore",
+    "damascus:exulite_block",
+    "damascus:raw_exulite_block",
+    "damascus:nightward_block"
+  ]
+}

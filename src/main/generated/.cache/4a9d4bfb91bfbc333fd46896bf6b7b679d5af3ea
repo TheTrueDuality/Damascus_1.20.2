@@ -1,0 +1,4 @@
+// 1.20.4	2024-03-20T16:40:19.7217503	Mod of Damascus/Tags for minecraft:block
+a279f34d5f6711adcd4d4b5cbee5d4e48d76cfc3 data\minecraft\tags\blocks\needs_iron_tool.json
+3e815a07a93327408f1268ab118fdb125b0738d9 data\minecraft\tags\blocks\mineable\pickaxe.json
+b94846d5ab73312c0b33ed0f7205c74493ca082e data\minecraft\tags\blocks\needs_diamond_tool.json

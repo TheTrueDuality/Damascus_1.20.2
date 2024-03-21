@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "damascus:block/tin_block"
+    }
+  }
+}

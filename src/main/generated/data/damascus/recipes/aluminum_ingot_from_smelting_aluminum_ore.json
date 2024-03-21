@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "aluminum_ingot",
+  "ingredient": {
+    "item": "damascus:aluminum_ore"
+  },
+  "result": "damascus:aluminum_ingot"
+}

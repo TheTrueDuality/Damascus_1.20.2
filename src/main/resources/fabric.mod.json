@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "damascus",
+	"version": "${version}",
+	"name": "Mod of Damascus",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Duality"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/mccourse/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "net.duality.damascus.Damascus"
+		],
+		"fabric-datagen": [
+			"net.duality.damascus.DamascusDataGenerator"
+		],
+		"client": [
+			"net.duality.damascus.DamascusClient"
+		]
+	},
+	"mixins": [
+		"mccourse.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": "~1.20.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

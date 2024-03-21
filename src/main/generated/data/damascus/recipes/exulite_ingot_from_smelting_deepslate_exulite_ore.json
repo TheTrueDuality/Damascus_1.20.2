@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "exulite_ingot",
+  "ingredient": {
+    "item": "damascus:deepslate_exulite_ore"
+  },
+  "result": "damascus:exulite_ingot"
+}
