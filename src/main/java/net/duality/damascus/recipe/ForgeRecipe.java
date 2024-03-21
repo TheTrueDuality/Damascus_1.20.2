@@ -59,7 +59,7 @@ public class ForgeRecipe implements Recipe<SimpleInventory> {
 
     @Override
     public DefaultedList<Ingredient> getIngredients() {
-        DefaultedList list = DefaultedList.ofSize(this.recipeItems.size());
+        DefaultedList<Ingredient> list = DefaultedList.ofSize(this.recipeItems.size(), Ingredient.EMPTY);
         list.addAll(recipeItems);
         return list;
     }

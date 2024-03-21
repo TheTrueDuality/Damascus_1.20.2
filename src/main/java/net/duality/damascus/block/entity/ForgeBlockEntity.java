@@ -1,17 +1,18 @@
 package net.duality.damascus.block.entity;
 
-import net.duality.damascus.item.ModItems;
+import net.duality.damascus.recipe.ForgeRecipe;
 import net.duality.damascus.screen.ForgeScreenHandler;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
+import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
+import net.minecraft.recipe.RecipeEntry;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -20,6 +21,9 @@ import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Objects;
+import java.util.Optional;
 
 public class ForgeBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(6, ItemStack.EMPTY);
@@ -114,9 +118,16 @@ public class ForgeBlockEntity extends BlockEntity implements ExtendedScreenHandl
     }
 
     private void craftItem() {
+        Optional<RecipeEntry<ForgeRecipe>> recipe = getCurrentRecipe();
+
+        this.removeStack(FLUX_INPUT_SLOT, 1);
         this.removeStack(ORE_ONE_INPUT_SLOT, 1);
-        this.setStack(OUTPUT_SLOT, new ItemStack(ModItems.TUNGSTEN_INGOT,
-                this.getStack(OUTPUT_SLOT).getCount() + 1));
+        this.removeStack(ORE_TWO_INPUT_SLOT, 1);
+        this.removeStack(ORE_THREE_INPUT_SLOT, 1);
+        this.removeStack(ORE_FOUR_INPUT_SLOT, 1);
+
+        this.setStack(OUTPUT_SLOT, new ItemStack(recipe.get().value().getResult(null).getItem(),
+                this.getStack(OUTPUT_SLOT).getCount() + recipe.get().value().getResult(null).getCount()));
     }
 
     private void resetProgress() {
@@ -132,7 +143,33 @@ public class ForgeBlockEntity extends BlockEntity implements ExtendedScreenHandl
     }
 
     private boolean hasRecipe() {
-        return this.getStack(ORE_ONE_INPUT_SLOT).getItem() == ModItems.RAW_TUNGSTEN;
+        Optional<RecipeEntry<ForgeRecipe>> recipe = getCurrentRecipe();
+
+        if (recipe.isEmpty()) {
+            return false;
+        }
+        
+        ItemStack result = recipe.get().value().getResult(null);
+
+        return canInsertAmountIntoOutputSlot(result.getCount())
+                && canInsertItemIntoOutputSlot(result);
+    }
+
+    private boolean canInsertItemIntoOutputSlot(ItemStack result) {
+        return this.getStack(OUTPUT_SLOT).isEmpty() || this.getStack(OUTPUT_SLOT).getItem() == result.getItem();
+    }
+
+    private boolean canInsertAmountIntoOutputSlot(int count) {
+        return this.getStack(OUTPUT_SLOT).getMaxCount() >= this.getStack(OUTPUT_SLOT).getCount() + count;
+    }
+
+    private Optional<RecipeEntry<ForgeRecipe>> getCurrentRecipe() {
+        SimpleInventory inventory = new SimpleInventory((this.size()));
+        for(int i = 0; i < this.size(); i++) {
+            inventory.setStack(i, this.getStack(i));
+        }
+
+        return Objects.requireNonNull(this.getWorld()).getRecipeManager().getFirstMatch(ForgeRecipe.Type.INSTANCE, inventory, this.getWorld());
     }
 
     private boolean canInsertIntoOutputSlot() {
