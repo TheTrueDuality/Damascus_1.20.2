@@ -1,0 +1,17 @@
+{
+  "type": "damascus:forging",
+  "ingredients": [
+    {
+      "item": "damascus:flux_dust"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "damascus:nickel_ingot"
+    }
+  ],
+  "output": {
+    "item": "damascus:iron_nickel_meld"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "damascus:forging",
+  "ingredients": [
+    {
+      "item": "damascus:flux_dust"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:netherite_scrap"
+    },
+    {
+      "item": "minecraft:netherite_scrap"
+    }
+  ],
+  "output": {
+    "item": "minecraft:netherite_ingot"
+  }
+}

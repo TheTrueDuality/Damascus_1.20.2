@@ -22,15 +22,43 @@ public class ForgeRecipe implements Recipe<SimpleInventory> {
         this.output = output;
         this.recipeItems = recipeItems;
     }
-
     @Override
     public boolean matches(SimpleInventory inventory, World world) {
-        if(world.isClient()) {
+        if (world.isClient) {
             return false;
+            }
+        switch (recipeItems.size()) {
+            case 1:
+                return matches_one(inventory,world);
+            case 2:
+                return matches_two(inventory,world);
+            case 3:
+                return matches_three(inventory,world);
+            case 4:
+                return matches_four(inventory,world);
+            case 5:
+                return matches_five(inventory,world);
+            default:
+                return false;
         }
-
+    }
+    private boolean matches_one(SimpleInventory inventory, World world) {
         return recipeItems.get(0).test(inventory.getStack(0));
     }
+    private boolean matches_two(SimpleInventory inventory, World world) {
+        return recipeItems.get(0).test(inventory.getStack(0)) && recipeItems.get(1).test(inventory.getStack(1));
+    }
+    private boolean matches_three(SimpleInventory inventory, World world) {
+        return recipeItems.get(0).test(inventory.getStack(0)) && recipeItems.get(1).test(inventory.getStack(1)) && recipeItems.get(2).test(inventory.getStack(2));
+    }
+    private boolean matches_four(SimpleInventory inventory, World world) {
+        return recipeItems.get(0).test(inventory.getStack(0)) && recipeItems.get(1).test(inventory.getStack(1)) && recipeItems.get(2).test(inventory.getStack(2)) && recipeItems.get(3).test(inventory.getStack(3));
+    }
+    private boolean matches_five(SimpleInventory inventory, World world) {
+        return recipeItems.get(0).test(inventory.getStack(0)) && recipeItems.get(1).test(inventory.getStack(1)) && recipeItems.get(2).test(inventory.getStack(2)) && recipeItems.get(3).test(inventory.getStack(3)) && recipeItems.get(4).test(inventory.getStack(4));
+    }
+
+
 
     @Override
     public ItemStack craft(SimpleInventory inventory, DynamicRegistryManager registryManager) {
