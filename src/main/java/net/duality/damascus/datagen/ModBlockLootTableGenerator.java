@@ -16,6 +16,7 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.RAW_TUNGSTEN_BLOCK);
         addDrop(ModBlocks.TUNGSTEN_BLOCK);
         addDrop(ModBlocks.TIN_BLOCK);
+        addDrop(ModBlocks.ZINC_BLOCK);
         // Ores
         addDrop(ModBlocks.TUNGSTEN_ORE, oreDrops(ModBlocks.TUNGSTEN_ORE, ModItems.RAW_TUNGSTEN));
         addDrop(ModBlocks.DEEPSLATE_TUNGSTEN_ORE, oreDrops(ModBlocks.DEEPSLATE_TUNGSTEN_ORE, ModItems.RAW_TUNGSTEN));
