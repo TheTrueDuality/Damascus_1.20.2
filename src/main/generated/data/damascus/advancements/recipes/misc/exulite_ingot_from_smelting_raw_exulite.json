@@ -30,5 +30,6 @@
     "recipes": [
       "minecraft:exulite_ingot_from_smelting_raw_exulite"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

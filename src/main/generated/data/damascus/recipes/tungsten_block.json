@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "damascus:tungsten_block"
-  }
+  },
+  "show_notification": true
 }

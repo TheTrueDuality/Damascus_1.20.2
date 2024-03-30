@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "damascus:raw_exulite_block"
-  }
+  },
+  "show_notification": true
 }

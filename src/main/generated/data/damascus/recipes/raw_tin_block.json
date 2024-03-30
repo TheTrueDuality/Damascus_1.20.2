@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "damascus:raw_tin_block"
-  }
+  },
+  "show_notification": true
 }

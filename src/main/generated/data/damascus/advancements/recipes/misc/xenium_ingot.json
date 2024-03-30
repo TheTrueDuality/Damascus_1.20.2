@@ -30,5 +30,6 @@
     "recipes": [
       "minecraft:xenium_ingot"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

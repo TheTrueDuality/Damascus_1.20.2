@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "damascus:silver_block"
-  }
+  },
+  "show_notification": true
 }

@@ -7,12 +7,12 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "has_tungsten_nugget": {
+    "has_tungsten_block": {
       "conditions": {
         "items": [
           {
             "items": [
-              "damascus:tungsten_nugget"
+              "damascus:tungsten_block"
             ]
           }
         ]
@@ -23,12 +23,13 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_tungsten_nugget"
+      "has_tungsten_block"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:tungsten_ingot"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

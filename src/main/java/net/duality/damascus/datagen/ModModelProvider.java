@@ -25,6 +25,8 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ZINC_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ZINC_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_ZINC_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_ZINC_ORE);
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.FORGE);
     }

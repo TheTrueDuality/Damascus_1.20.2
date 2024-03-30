@@ -30,5 +30,6 @@
     "recipes": [
       "minecraft:xenium_block"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

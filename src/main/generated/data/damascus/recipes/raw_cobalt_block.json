@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "damascus:raw_cobalt_block"
-  }
+  },
+  "show_notification": true
 }

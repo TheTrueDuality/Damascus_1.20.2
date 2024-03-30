@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "damascus:steel_block"
-  }
+  },
+  "show_notification": true
 }
